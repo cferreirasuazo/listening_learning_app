@@ -632,6 +632,7 @@ dependencies = [
     { name = "boto3" },
     { name = "chromadb" },
     { name = "ollama" },
+    { name = "python-dotenv" },
     { name = "streamlit" },
     { name = "youtube-transcript-api" },
 ]
@@ -641,6 +642,7 @@ requires-dist = [
     { name = "boto3", specifier = ">=1.36.24" },
     { name = "chromadb", specifier = ">=0.6.3" },
     { name = "ollama", specifier = ">=0.4.7" },
+    { name = "python-dotenv", specifier = ">=1.0.1" },
     { name = "streamlit", specifier = ">=1.42.1" },
     { name = "youtube-transcript-api", specifier = ">=0.6.3" },
 ]

@@ -10,6 +10,7 @@ A Python application for processing and analyzing JLPT listening comprehension q
 - Support for JLPT sections 2 and 3 question types
 - Embeddings using Ollama's DeepSeek model
 - Persistent vector storage using ChromaDB
+- **Interactive frontend using Streamlit**
 
 ## Prerequisites
 
@@ -31,9 +32,9 @@ python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
 
-3. Install dependencies:
+3. Install dependencies using `uv`:
 ```bash
-pip install .
+uv install
 ```
 
 ## Project Structure
@@ -42,6 +43,7 @@ pip install .
 - `chat.py`: Implements chat functionality using the DeepSeek model
 - `transcriber.py`: Manages YouTube transcript downloads and processing
 - `structured_data.py`: Processes and structures Japanese language learning content
+- `app.py`: Streamlit app for interactive frontend
 
 ## Usage
 
@@ -80,6 +82,16 @@ chat = DeepSeekChat()
 response = chat.generate_response("your message")
 ```
 
+### Running the Streamlit App
+
+To run the Streamlit app, use the following command:
+
+```bash
+streamlit run app.py
+```
+
+This will start a local server and open the app in your default web browser. If it doesn't open automatically, navigate to `http://localhost:8501`.
+
 ## Dependencies
 
 - boto3 >= 1.36.24
@@ -98,5 +110,6 @@ listening-learning-app/
 ├── chat.py
 ├── transcriber.py
 ├── structured_data.py
+├── app.py
 └── .gitignore
 ```
